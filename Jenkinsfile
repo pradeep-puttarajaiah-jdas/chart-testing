@@ -12,6 +12,8 @@ pipeline {
            sh 'helm repo update'
            // Linting
            sh 'helm lint'
+           // List the releases
+           sh 'helm list'
            // Chart testing
            sh 'helm test mychart'
           }
