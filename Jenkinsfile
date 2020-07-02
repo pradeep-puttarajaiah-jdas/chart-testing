@@ -14,7 +14,6 @@ pipeline {
            sh 'helm lint'
            // Chart testing
            sh 'helm test mychart'
-           sh 'kubectl describe pod mychart'
           }
        }
     }
