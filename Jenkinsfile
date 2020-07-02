@@ -13,7 +13,7 @@ pipeline {
            // Linting
            sh 'helm lint'
            // Chart testing
-           sh 'helm test my-release'
+           sh 'helm test mychart'
           }
        }
     }
