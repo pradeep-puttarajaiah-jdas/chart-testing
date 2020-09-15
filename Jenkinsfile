@@ -15,7 +15,7 @@ pipeline {
             // Install mychart in to cluster
            sh 'helm install -n chart-test'
            // List the releases
-           sh 'helm list -n chart-test'
+           sh 'helm list https://pradeep-puttarajaiah-jdas.github.io/chart-testing/ -n chart-test --generate-name'
            // Chart testing
            sh 'helm test test_chart -n chart-test'
           }
