@@ -13,7 +13,7 @@ pipeline {
            // Linting
            sh 'helm lint'
             // Install mychart in to cluster
-           sh 'helm install test_chart -n chart-test'
+           sh 'helm install test_chart -n chart-test --generate-name'
            // List the releases
            sh 'helm list -n chart-test'
            // Chart testing
