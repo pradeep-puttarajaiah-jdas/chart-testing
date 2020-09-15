@@ -12,10 +12,12 @@ pipeline {
            sh 'helm repo update'
            // Linting
            sh 'helm lint'
+            // Install mychart in to cluster
+           sh 'helm install test_chart ./mychart -n chart-test'
            // List the releases
-           sh 'helm list'
+           sh 'helm list -n chart-test'
            // Chart testing
-           sh 'helm test mychart'
+           sh 'helm test test_chart'
           }
        }
     }
