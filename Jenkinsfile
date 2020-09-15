@@ -17,7 +17,7 @@ pipeline {
            // List the releases
            sh 'helm list -n chart-test'
            // Chart testing
-           sh 'helm test test_chart'
+           sh 'helm test test_chart -n chart-test'
           }
        }
     }
