@@ -1,0 +1,12 @@
+name: Secret_Example
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo $PERL_SECURE
+        env: 
+          PERL_SECURE: ${{ secrets.PERL_STONE_SECURE }}
+          
