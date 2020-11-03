@@ -5,7 +5,7 @@ on: push
 
 jobs:
   # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
+  # when a job name not provided
   super-lint:
     # Name the Job
     name: Lint code base
